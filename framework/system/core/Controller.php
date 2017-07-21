@@ -54,7 +54,7 @@ require_once 'Blade.php';
  * @author        EllisLab Dev Team
  * @link        https://codeigniter.com/user_guide/general/controllers.html
  */
-class Ci_Controller extends Blade
+class CI_Controller extends Blade
 {
 
     /**
@@ -95,7 +95,7 @@ class Ci_Controller extends Blade
      * @static
      * @return    object
      */
-    public static function &getInstance()
+    public static function &get_instance()
     {
         return self::$instance;
     }
