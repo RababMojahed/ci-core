@@ -54,7 +54,7 @@ require_once 'Blade.php';
  * @author        EllisLab Dev Team
  * @link        https://codeigniter.com/user_guide/general/controllers.html
  */
-class CiController extends Blade
+class Ci_Controller extends Blade
 {
 
     /**
