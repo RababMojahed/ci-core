@@ -1,6 +1,6 @@
 {
 	"description": "The CodeIgniter framework and blade template",
-	"name": "thanhtaivtt/codeigniter-blade",
+	"name": "thanhtaivtt/ci-core",
 	"version":"1.0.0",
 	"type": "project",
 	"homepage": "https://codeigniter.com",
