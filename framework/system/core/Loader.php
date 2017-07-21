@@ -345,10 +345,6 @@ class CI_Loader {
 			}
 		}
 
-		if ( ! is_subclass_of($model, 'CI_Model'))
-		{
-			throw new RuntimeException("Class ".$model." doesn't extend CI_Model");
-		}
 
 		$this->_ci_models[] = $name;
 		$CI->$name = new $model();
