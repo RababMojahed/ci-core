@@ -22,7 +22,7 @@ $config['composer_autoload'] = FCPATH.'vendor/autoload.php';
  ```
 $system_path = 'system';
 //replace to
-$system_path = 'vendor/thanhtaivtt/codeigniter-blade/framework/system';
+$system_path = 'vendor/thanhtaivtt/codeigniter-blade/src/system';
 ```
 
 ## Usage
