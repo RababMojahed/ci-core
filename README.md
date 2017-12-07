@@ -1,4 +1,4 @@
-[![Latest Stable Version](https://poser.pugx.org/thanhtaivtt/codeigniter-blade/v/stable)](https://packagist.org/packages/thanhtaivtt/codeigniter-blade)[![Total Downloads](https://poser.pugx.org/thanhtaivtt/codeigniter-blade/downloads)](https://packagist.org/packages/thanhtaivtt/codeigniter-blade)[![Latest Unstable Version](https://poser.pugx.org/thanhtaivtt/codeigniter-blade/v/unstable)](https://packagist.org/packages/thanhtaivtt/codeigniter-blade)[![License](https://poser.pugx.org/thanhtaivtt/codeigniter-blade/license)](https://packagist.org/packages/thanhtaivtt/codeigniter-blade)[![Monthly Downloads](https://poser.pugx.org/thanhtaivtt/codeigniter-blade/d/monthly)](https://packagist.org/packages/thanhtaivtt/codeigniter-blade)[![Daily Downloads](https://poser.pugx.org/thanhtaivtt/codeigniter-blade/d/daily)](https://packagist.org/packages/thanhtaivtt/codeigniter-blade)[![composer.lock](https://poser.pugx.org/thanhtaivtt/codeigniter-blade/composerlock)](https://packagist.org/packages/thanhtaivtt/codeigniter-blade)
+[![Latest Stable Version](https://poser.pugx.org/thanhtaivtt/ci-core/v/stable)](https://packagist.org/packages/thanhtaivtt/ci-core)[![Total Downloads](https://poser.pugx.org/thanhtaivtt/ci-core/downloads)](https://packagist.org/packages/thanhtaivtt/ci-core)[![Latest Unstable Version](https://poser.pugx.org/thanhtaivtt/ci-core/v/unstable)](https://packagist.org/packages/thanhtaivtt/ci-core)[![License](https://poser.pugx.org/thanhtaivtt/ci-core/license)](https://packagist.org/packages/thanhtaivtt/ci-core)[![Monthly Downloads](https://poser.pugx.org/thanhtaivtt/ci-core/d/monthly)](https://packagist.org/packages/thanhtaivtt/ci-core)[![Daily Downloads](https://poser.pugx.org/thanhtaivtt/ci-core/d/daily)](https://packagist.org/packages/thanhtaivtt/ci-core)[![composer.lock](https://poser.pugx.org/thanhtaivtt/ci-core/composerlock)](https://packagist.org/packages/thanhtaivtt/ci-core)
 ## Codeiginter-core
 
 -Codeiginter Blade is composition codeiginter framework, composer and blade templade.
@@ -9,7 +9,7 @@
 
  **fix lines:**
 
-```
+``` php
 $config['composer_autoload'] = FALSE;
 //replace to
 $config['composer_autoload'] = FCPATH.'vendor/autoload.php';
@@ -19,17 +19,17 @@ $config['composer_autoload'] = FCPATH.'vendor/autoload.php';
 
 **fix lines:**
 
- ```
+``` php
 $system_path = 'system';
 //replace to
-$system_path = 'vendor/thanhtaivtt/codeigniter-blade/src/system';
+$system_path = 'vendor/thanhtaivtt/ci-core/src/system';
 ```
 
 ## Usage
 
 - In controllers use;
 
-```
+``` php
 //load view
 $this->view('viewName',[data]);
 
