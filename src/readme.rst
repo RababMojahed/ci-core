@@ -52,7 +52,8 @@ agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/so
 *********
 Resources
 *********
-- `Tutorial Vietnamese <http://toidicode.com>`
+
+- `Tutorial Vietnamese <http://toidicode.com>`_
 -  `User Guide <https://codeigniter.com/docs>`_
 -  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
 -  `Community Forums <http://forum.codeigniter.com/>`_
