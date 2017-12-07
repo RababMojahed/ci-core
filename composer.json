@@ -1,7 +1,7 @@
 {
 	"description": "The CodeIgniter framework and blade template",
 	"name": "thanhtaivtt/ci-core",
-	"version":"1.0.0",
+	"version":"2.0.0",
 	"homepage": "https://codeigniter.com",
 	"license": "MIT",
 	"require": {
