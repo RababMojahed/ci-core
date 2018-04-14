@@ -37,9 +37,41 @@ if (!function_exists('csrf_field')) {
     {
         $ci = &get_instance();
 
-        $name  = $ci->security->get_csrf_token_name();
+        $name = $ci->security->get_csrf_token_name();
         $value = $ci->security->get_csrf_hash();
 
         return '<input type="hidden" name="' . $name . '" value="' . $value . '">';
+    }
+}
+
+if (!function_exists('middleware')) {
+    /**
+     * Load middleware width helper
+     *
+     * @param $middleware
+     */
+    function middleware($middleware)
+    {
+        $CI =& get_instance();
+
+        if (is_array($middleware)) {
+            foreach ($middleware as $midd) {
+                $CI->load->middleware($midd);
+            }
+        } else {
+            $CI->load->middleware($middleware);
+        }
+    }
+}
+
+if (!function_exists('helper')) {
+    /**
+     * Load helper as helper
+     *
+     * @param $helpers
+     */
+    function helper($helpers)
+    {
+        $this->load->helper($helpers);
     }
 }

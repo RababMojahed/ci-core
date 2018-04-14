@@ -14,10 +14,13 @@ trait Middleware
         $middleWarePath = APPPATH . '/middleware/' . $middleware . '.php';
 
         if (file_exists($middleWarePath)) {
-            require_once $middleWarePath;
-            $middleware();
+            require_once($middleWarePath);
+
+            if (!$middleware()) {
+                throw new RuntimeException("Middleware must be return statement");
+            }
         } else {
-            show_error('Unable to load middleware file: ' . $middleWarePath);
+            throw new RuntimeException('Unable to load middleware file: ' . $middleWarePath);
         }
     }
 }
