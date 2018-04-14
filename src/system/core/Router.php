@@ -382,9 +382,17 @@ class CI_Router {
 			if (is_array($val))
 			{
 				$val = array_change_key_case($val, CASE_LOWER);
+				
 				if (isset($val[$http_verb]))
 				{
 					$val = $val[$http_verb];
+				} elseif (isset($val['ajax']))
+				{
+					if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+						$val = $val['ajax'];
+					} else {
+						return show_error('Method not allowed!', 500, 'Method not allowed');
+					}
 				}
 				else
 				{

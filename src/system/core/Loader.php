@@ -37,6 +37,8 @@
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+require_once('traits/Middleware.php');
+
 /**
  * Loader Class
  *
@@ -218,6 +220,9 @@ class CI_Loader {
 		$this->_ci_load_library($library, $params, $object_name);
 		return $this;
 	}
+
+	//use middleware trait
+	use Middleware;
 
 	// --------------------------------------------------------------------
 
@@ -1073,6 +1078,19 @@ class CI_Loader {
 		show_error('Unable to load the requested class: '.$class);
 	}
 
+	/**
+	 * load blade template
+	 * 
+	 * @param  string $file
+	 * @param  array $data
+	 * @return view
+	 */
+	public function blade($file, $data) {
+		require_once('Blade.php');
+
+		return (new Blade())->view($file, $data);
+	}
+
 	// --------------------------------------------------------------------
 
 	/**
@@ -1320,6 +1338,7 @@ class CI_Loader {
 				$this->$type($autoload[$type]);
 			}
 		}
+		$this->helper('tt');
 
 		// Autoload drivers
 		if (isset($autoload['drivers']))

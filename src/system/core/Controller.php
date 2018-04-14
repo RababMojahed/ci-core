@@ -99,6 +99,7 @@ class CI_Controller extends Blade
     {
         return self::$instance;
     }
+
     public function get($name = null)
     {
         if ($this->input) {
@@ -107,6 +108,7 @@ class CI_Controller extends Blade
             return;
         }
     }
+    
     public function post($name = null)
     {
         if ($this->input) {
