@@ -16,9 +16,7 @@ trait Middleware
         if (file_exists($middleWarePath)) {
             require_once($middleWarePath);
 
-            if (!$middleware()) {
-                throw new RuntimeException("Middleware must be return statement");
-            }
+            $middleware();
         } else {
             throw new RuntimeException('Unable to load middleware file: ' . $middleWarePath);
         }
