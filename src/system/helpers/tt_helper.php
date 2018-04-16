@@ -22,7 +22,7 @@ if (!function_exists('view')) {
      * @param  array $data
      * @return view
      */
-    function view($file, array $data)
+    function view($file, array $data = [])
     {
         $CI = &get_instance();
 
