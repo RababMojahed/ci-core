@@ -390,9 +390,10 @@ class CI_Router {
 				{
 					if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
 						$val = $val['ajax'];
-					} else {
-						return show_error('Method not allowed!', 500, 'Method not allowed');
 					}
+					//else {
+					//	return show_error('Method not allowed!', 500, 'Method not allowed');
+					//}
 				}
 				else
 				{
